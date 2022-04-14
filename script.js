@@ -17,6 +17,13 @@ function closeModal(){
     overlay.classList.add("hidden");
 };
 
+function escape(event){
+    if (event.key === "Escape"){
+        if(!modal.classList.contains("hidden"))
+        closeModal()
+    }
+}
+
 
 // Select All For Loop for "the showModalBtn" Variable
 for (let i = 0; i < openModalBtn.length; i++)
@@ -26,3 +33,6 @@ openModalBtn[i].addEventListener("click", openModal);
 // When the X button is clicked, or User clicks outside Modal Window, adds the Hidden Class again
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+// Only when the Modal is Open, the Escape Key will Close the Modal Window
+document.addEventListener("keydown", escape);
