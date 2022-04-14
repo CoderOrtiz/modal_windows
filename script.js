@@ -18,10 +18,8 @@ function closeModal(){
 };
 
 function escape(event){
-    if (event.key === "Escape"){
-        if(!modal.classList.contains("hidden"))
-        closeModal()
-    }
+    if (event.key === "Escape" && !modal.classList.contains("hidden"))
+        closeModal();
 }
 
 
