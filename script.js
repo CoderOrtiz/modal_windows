@@ -17,7 +17,7 @@ function closeModal(){
     overlay.classList.add("hidden");
 };
 
-function escape(event){
+function escapeKey (event){
     if (event.key === "Escape" && !modal.classList.contains("hidden"))
         closeModal();
 }
@@ -33,4 +33,4 @@ closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
 // Only when the Modal is Open, the Escape Key will Close the Modal Window
-document.addEventListener("keydown", escape);
+document.addEventListener("keydown", escapeKey);
